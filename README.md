@@ -57,12 +57,43 @@ Part 1: Switched Network Design
 
 <img width="1522" height="1074" alt="image" src="https://github.com/user-attachments/assets/dd27a6b8-15af-48ad-92e9-9efdedcba7fa" />
 
+Key Observations
+
+Replacing hubs with switches eliminated collision-related performance issues by separating collision domains at each switch port.
+
+VLAN segmentation successfully isolated departmental traffic, preventing unauthorized communication between Marketing, Sales, and Administration networks.
+
+Trunk links enabled multiple VLANs to traverse a single backbone connection while maintaining logical separation of traffic.
+
+Spanning Tree Protocol (STP) effectively prevented Layer 2 loops and ensured continued connectivity by activating alternate paths during link failures.
+
+Centralizing servers within a dedicated VLAN allowed controlled access while simplifying network management and security enforcement.
+
 
 Part 2: Layer 3 Configuration and Packet Switching
 
 
 <img width="1636" height="986" alt="image" src="https://github.com/user-attachments/assets/9f2bb73b-56a5-48b1-83a8-13482497d352" />
 
+Implementation Summary
+
+Configured two private IPv4 networks (Class A and Class C) connected via a router
+
+Assigned IP addresses, subnet masks, and default gateways to end hosts and router interfaces
+
+Verified end-to-end connectivity using ICMP (ping) testing
+
+Used Packet Tracer’s PDU simulation to observe frame behavior across switches and routers
+
+Key Observations
+
+IP addresses remain unchanged end-to-end during packet delivery
+
+MAC addresses remain unchanged when frames pass through a switch
+
+MAC addresses are rewritten when frames pass through a router
+
+Routers forward traffic based on Layer 3 (IP) information, while switches forward traffic based on Layer 2 (MAC) information
 
 
 
